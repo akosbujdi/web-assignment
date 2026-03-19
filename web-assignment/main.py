@@ -3,10 +3,14 @@ from pymongo.mongo_client import MongoClient
 from pydantic import BaseModel
 import requests
 
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
 app = FastAPI()
 
 # --- DB Connection ---
-uri = "mongodb+srv://akodini04_db_user:6kiVmm1WtkOtLpWn@products.wgphcdi.mongodb.net/?appName=products"
+uri = os.getenv("MONGO_URI")
 client = MongoClient(uri)
 db = client["inventory_db"]
 collection = db["products"]
