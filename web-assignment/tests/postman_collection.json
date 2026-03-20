@@ -31,12 +31,10 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://host.docker.internal:8000/getSingleProduct?id=1001",
+          "raw": "http://localhost:8000/getSingleProduct?id=1001",
           "protocol": "http",
           "host": [
-            "host",
-            "docker",
-            "internal"
+            "localhost"
           ],
           "port": "8000",
           "path": [
@@ -76,12 +74,10 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://host.docker.internal:8000/getAll",
+          "raw": "http://localhost:8000/getAll",
           "protocol": "http",
           "host": [
-            "host",
-            "docker",
-            "internal"
+            "localhost"
           ],
           "port": "8000",
           "path": [
@@ -124,12 +120,10 @@
           }
         },
         "url": {
-          "raw": "http://host.docker.internal:8000/addNew",
+          "raw": "http://localhost:8000/addNew",
           "protocol": "http",
           "host": [
-            "host",
-            "docker",
-            "internal"
+            "localhost"
           ],
           "port": "8000",
           "path": [
@@ -163,12 +157,10 @@
         "method": "DELETE",
         "header": [],
         "url": {
-          "raw": "http://host.docker.internal:8000/deleteOne?id=9999",
+          "raw": "http://localhost:8000/deleteOne?id=9999",
           "protocol": "http",
           "host": [
-            "host",
-            "docker",
-            "internal"
+            "localhost"
           ],
           "port": "8000",
           "path": [
@@ -208,12 +200,10 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://host.docker.internal:8000/startsWith?letter=E",
+          "raw": "http://localhost:8000/startsWith?letter=E",
           "protocol": "http",
           "host": [
-            "host",
-            "docker",
-            "internal"
+            "localhost"
           ],
           "port": "8000",
           "path": [
@@ -253,12 +243,10 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://host.docker.internal:8000/paginate?start_id=1002&end_id=1012",
+          "raw": "http://localhost:8000/paginate?start_id=1002&end_id=1012",
           "protocol": "http",
           "host": [
-            "host",
-            "docker",
-            "internal"
+            "localhost"
           ],
           "port": "8000",
           "path": [
@@ -302,12 +290,10 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://host.docker.internal:8000/convert?id=1002",
+          "raw": "http://localhost:8000/convert?id=1002",
           "protocol": "http",
           "host": [
-            "host",
-            "docker",
-            "internal"
+            "localhost"
           ],
           "port": "8000",
           "path": [
