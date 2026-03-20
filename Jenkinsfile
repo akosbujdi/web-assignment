@@ -56,6 +56,7 @@ EOF
         stage('Package') {
             steps {
                 sh 'zip -r complete-$(date +%Y%m%d-%H%M%S).zip web-assignment/ README.txt'
+                archiveArtifacts artifacts: 'complete-*.zip, README.txt', fingerprint: true
             }
         }
 
