@@ -17,8 +17,10 @@ pipeline {
 
         stage('Run Container') {
             steps {
-                sh 'docker run -d -p 8000:8000 --name web-assignment-container --env-file ./web-assignment/.env web-assignment'
-                sh 'sleep 5'
+                withCredentials([string(credentialsId: 'MONGO_URI', variable: 'MONGO_URI')]) {
+                    sh 'docker run -d -p 8000:8000 --name web-assignment-container -e MONGO_URI=$MONGO_URI web-assignment'
+                    sh 'sleep 5'
+                }
             }
         }
 
