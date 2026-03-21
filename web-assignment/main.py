@@ -2,12 +2,16 @@ from fastapi import FastAPI, HTTPException
 from pymongo.mongo_client import MongoClient
 from pydantic import BaseModel
 import requests
+from prometheus_fastapi_instrumentator import Instrumentator
 
 import os
 from dotenv import load_dotenv
 load_dotenv()
 
 app = FastAPI()
+
+# API monitoring
+Instrumentator().instrument(app).expose(app)
 
 # --- DB Connection ---
 uri = os.getenv("MONGO_URI")
