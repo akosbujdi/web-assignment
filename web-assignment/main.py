@@ -6,6 +6,7 @@ from prometheus_fastapi_instrumentator import Instrumentator
 
 import os
 from dotenv import load_dotenv
+
 load_dotenv()
 
 app = FastAPI()
@@ -13,14 +14,14 @@ app = FastAPI()
 # API monitoring
 Instrumentator().instrument(app).expose(app)
 
-# --- DB Connection ---
+# DB connection to Mongo Atlas
 uri = os.getenv("MONGO_URI")
 client = MongoClient(uri)
 db = client["inventory_db"]
 collection = db["products"]
 
 
-# --- Pydantic model for adding a new product ---
+# Pydantic model for adding new product
 class Product(BaseModel):
     ProductID: int
     Name: str
@@ -29,14 +30,13 @@ class Product(BaseModel):
     Description: str
 
 
-# --- Helper to strip MongoDB's _id field from results ---
+# Helper to strip MongoDB's _id field from results
 def clean(product):
     product["_id"] = str(product["_id"])
     return product
 
 
-# --- Endpoints ---
-
+# Endpoints
 @app.get("/getSingleProduct")
 def get_single_product(id: int):
     product = collection.find_one({"ProductID": id})
