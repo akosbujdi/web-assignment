@@ -62,6 +62,7 @@ EOF
 
         stage('Cleanup') {
             steps {
+                sh 'sleep 30'
                 sh 'docker stop web-assignment-container'
                 sh 'docker rm web-assignment-container'
             }
