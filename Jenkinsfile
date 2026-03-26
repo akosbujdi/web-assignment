@@ -19,7 +19,7 @@ pipeline {
             steps {
                 withCredentials([string(credentialsId: 'MONGO_URI', variable: 'MONGO_URI')]) {
                     sh 'docker rm -f web-assignment-container || true'
-                    sh 'docker run -d -p 8000:8000 --name web-assignment-container -e MONGO_URI=$MONGO_URI web-assignment'
+                    sh 'docker run -d -p 8001:8000 --name web-assignment-container -e MONGO_URI=$MONGO_URI web-assignment'
                     sh 'sleep 5'
                 }
             }
@@ -46,7 +46,7 @@ GET  /startsWith?letter=s            - Returns all products starting with a lett
 GET  /paginate?start_id=1&end_id=50  - Returns up to 10 products in ID range
 GET  /convert?id=1                   - Returns product price converted to EUR
 
-FastAPI Interactive Docs: http://localhost:8000/docs
+FastAPI Interactive Docs: http://localhost:8001/docs
 Full FastAPI documentation: https://fastapi.tiangolo.com/
 EOF
                 '''

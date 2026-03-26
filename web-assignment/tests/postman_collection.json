@@ -31,12 +31,12 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:8000/getSingleProduct?id=1001",
+          "raw": "http://localhost:8001/getSingleProduct?id=1001",
           "protocol": "http",
           "host": [
             "localhost"
           ],
-          "port": "8000",
+          "port": "8001",
           "path": [
             "getSingleProduct"
           ],
@@ -74,12 +74,12 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:8000/getAll",
+          "raw": "http://localhost:8001/getAll",
           "protocol": "http",
           "host": [
             "localhost"
           ],
-          "port": "8000",
+          "port": "8001",
           "path": [
             "getAll"
           ]
@@ -120,12 +120,12 @@
           }
         },
         "url": {
-          "raw": "http://localhost:8000/addNew",
+          "raw": "http://localhost:8001/addNew",
           "protocol": "http",
           "host": [
             "localhost"
           ],
-          "port": "8000",
+          "port": "8001",
           "path": [
             "addNew"
           ]
@@ -157,12 +157,12 @@
         "method": "DELETE",
         "header": [],
         "url": {
-          "raw": "http://localhost:8000/deleteOne?id=9999",
+          "raw": "http://localhost:8001/deleteOne?id=9999",
           "protocol": "http",
           "host": [
             "localhost"
           ],
-          "port": "8000",
+          "port": "8001",
           "path": [
             "deleteOne"
           ],
@@ -200,12 +200,12 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:8000/startsWith?letter=E",
+          "raw": "http://localhost:8001/startsWith?letter=E",
           "protocol": "http",
           "host": [
             "localhost"
           ],
-          "port": "8000",
+          "port": "8001",
           "path": [
             "startsWith"
           ],
@@ -243,12 +243,12 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:8000/paginate?start_id=1002&end_id=1012",
+          "raw": "http://localhost:8001/paginate?start_id=1002&end_id=1012",
           "protocol": "http",
           "host": [
             "localhost"
           ],
-          "port": "8000",
+          "port": "8001",
           "path": [
             "paginate"
           ],
@@ -290,12 +290,12 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:8000/convert?id=1002",
+          "raw": "http://localhost:8001/convert?id=1002",
           "protocol": "http",
           "host": [
             "localhost"
           ],
-          "port": "8000",
+          "port": "8001",
           "path": [
             "convert"
           ],
